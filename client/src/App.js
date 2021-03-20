@@ -7,8 +7,9 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path='/signup'>
-          <SignUp></SignUp>
+      
+      <Route path='/signup'>
+           <SignUp></SignUp>
         </Route>
         <Route path='/signin'>
           <SignIn></SignIn>
