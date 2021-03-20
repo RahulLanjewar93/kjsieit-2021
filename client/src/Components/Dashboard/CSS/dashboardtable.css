@@ -1,0 +1,42 @@
+.tablehead{
+    position: sticky;
+}
+
+.tableheadrow{
+    margin: 0;
+    background-color: rgb(255, 169, 169);
+}
+
+.tableheadrow , .headrow td, th{
+    width: 20vw;
+    text-align: center;
+}
+
+.collapsible-header{
+    padding: 0;
+    margin: 0;
+}
+
+.headrow img{
+    height: 6vmin;
+    width: auto;
+    border: 0.1vmin solid rgb(255, 169, 169);
+    border-radius: 0.5vmin;
+    margin-right: 4vmin;
+}
+
+.collapsible-body{
+    text-align: center;
+    background-color: rgb(255, 225, 225);
+}
+
+.collapsible-body img{
+    height: 25vmin;
+    width: auto;
+    border: 0.2vmin solid;
+    border-radius: 1vmin;
+}
+
+.collapsible-body span{
+    font-weight: bold;
+}
