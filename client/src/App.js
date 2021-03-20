@@ -10,21 +10,21 @@ import SideNav from './Components/SideNav';
 function App() {
   return (
     <Router>
-      <Switch>
       <SideNav/>
+      <Switch>
       <Route path='/signup'>
            <SignUp></SignUp>
         </Route>
         <Route path='/signin'>
           <SignIn></SignIn>
         </Route>
-        <Route path='/category'>
+        <Route path='/categories'>
           <Categories></Categories>
         </Route>
-        <Route path='/product'>
+        <Route path='/products'>
           <Products></Products>
         </Route>
-        <Route path='/DashboardTable'>
+        <Route path='/dashboard'>
           <DashboardTable></DashboardTable>
           </Route>
       </Switch>
