@@ -1,20 +1,12 @@
-import './App.css';
+
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import SignIn from './Components/Auth/SignIn'
-import SignUp from './Components/Auth/SignUp'
+
+
+import AddAgent from './Components/Dashboard/dashBoard'
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path='/signup'>
-          <SignUp></SignUp>
-        </Route>
-        <Route path='/signin'>
-          <SignIn></SignIn>
-        </Route>
-      </Switch>
-    </Router>
+    <Dashboard/>
+    
   );
 }
 
