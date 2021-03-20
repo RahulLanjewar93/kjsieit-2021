@@ -22,8 +22,8 @@ function SideNav() {
             <a href="#name"><span className="white-text name">Admin</span></a>
             <a href="#email"><span className="white-text email"></span></a>
             </div></li>
-            <li><Link to="/dashboard">Product Inventory</Link></li>
-            <li><Link to="/products">View Sales</Link></li>
+            <li><Link to="/DashboardTable">Product Inventory</Link></li>
+            <li><Link to="#!">View Sales</Link></li>
             <li><Link to="#!">Update Inventory</Link></li>
             <li><Link to="#!">Add Agent</Link></li>
             <li><Link to="/product">Add Product</Link></li>

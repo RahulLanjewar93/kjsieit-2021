@@ -8,36 +8,42 @@ import Product from './Components/Products/Product'
 import DashboardTable from './Components/Dashboard/DashboardTable'
 import Categories from './Components/Categories/Categories'
 import Category from './Components/Categories/Category'
-import SideNav from './Components/SideNav';
+import SideNav from './Components/Dashboard/SideNav';
+import Header from './Components/Dashboard/Header'
+
 function App() {
-  return (
-    <Router>
-      <SideNav/>
-      <Switch>
-        <Route path='/signup'>
-           <SignUp></SignUp>
-        </Route>
-        <Route path='/signin'>
-          <SignIn></SignIn>
-        </Route>
-        <Route path='/categories'>
-          <Categories></Categories>
-        </Route>
-        <Route path='/products'>
-          <Products></Products>
-        </Route>
-        <Route path='/dashboard'>
-          <DashboardTable></DashboardTable>
-        </Route>
-        <Route path='/product'>
-          <Product></Product>
-        </Route>
-        <Route path='/category'>
-          <Category></Category>
-        </Route>
-      </Switch>
-    </Router>
-  );
+    return (
+        <Router>
+            <SideNav></SideNav>
+
+            <Switch>
+                <Route path='/signup'>
+                    <SignUp></SignUp>
+                </Route>
+                <Route path='/signin'>
+                    <SignIn></SignIn>
+                </Route>
+                <Route path='/categories'>
+                    <Categories></Categories>
+                </Route>
+                <Route path='/category'>
+                    <Category></Category>
+                </Route>
+                <Route path='/products'>
+                    <Products></Products>
+                </Route>
+                <Route path='/product'>
+                    <Product></Product>
+                </Route>
+                <Route path='/Header'>
+                    <Header></Header>
+                </Route>
+                <Route path='/dashboard'>
+                    <DashboardTable></DashboardTable>
+                </Route>
+            </Switch>
+        </Router>
+    );
 }
 
 export default App;
