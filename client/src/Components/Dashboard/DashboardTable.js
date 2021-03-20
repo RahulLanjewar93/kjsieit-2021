@@ -5,7 +5,7 @@ import './CSS/dashboardtable.css';
 class DashboardTable extends Component {
     render() {
         return (
-            <div>
+            <div className="table-container">
                 <table>
                     <ul className="collapsible">
                         <li>
@@ -31,15 +31,15 @@ class DashboardTable extends Component {
                                 </tr>
                             </div>
                             <div className="collapsible-body row">
-                                <div className="col s4">
+                                <div className="col s12 m12 l4">
                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-cIM0mLfHYvMSTnjhxgPRtE-HwMCXp5QYVA&usqp=CAU" alt="product" />
                                 </div>
-                                <div className="col s4">
+                                <div className="col s12 m12 l4">
                                     <p><span>Company name: </span>Nokia</p>
                                     <p><span>Model Name: </span>2233</p>
                                     <p><span>Price: </span>₹3000</p>
                                 </div>
-                                <div className="col s4">
+                                <div className="col s12 m12 l4">
                                     <p><span>Category: </span>Mobile Phones</p>
                                     <p><span>Specifications: </span>4GB/64GB, 48mP, 5000mAH</p>
                                     <p><span>Stock: </span>50</p>
@@ -57,15 +57,15 @@ class DashboardTable extends Component {
                                 </tr>
                             </div>
                             <div className="collapsible-body row">
-                                <div className="col s4">
+                                <div className="col s12 m12 l4">
                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-cIM0mLfHYvMSTnjhxgPRtE-HwMCXp5QYVA&usqp=CAU" alt="product" />
                                 </div>
-                                <div className="col s4">
+                                <div className="col s12 m12 l4">
                                     <p><span>Company name: </span>Nokia</p>
                                     <p><span>Model Name: </span>2233</p>
                                     <p><span>Price: </span>₹3000</p>
                                 </div>
-                                <div className="col s4">
+                                <div className="col s12 m12 l4">
                                     <p><span>Category: </span>Mobile Phones</p>
                                     <p><span>Specifications: </span>4GB/64GB, 48mP, 5000mAH</p>
                                     <p><span>Stock: </span>50</p>
@@ -83,15 +83,15 @@ class DashboardTable extends Component {
                                 </tr>
                             </div>
                             <div className="collapsible-body row">
-                                <div className="col s4">
+                                <div className="col s12 m12 l4">
                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-cIM0mLfHYvMSTnjhxgPRtE-HwMCXp5QYVA&usqp=CAU" alt="product" />
                                 </div>
-                                <div className="col s4">
+                                <div className="col s12 m12 l4">
                                     <p><span>Company name: </span>Nokia</p>
                                     <p><span>Model Name: </span>2233</p>
                                     <p><span>Price: </span>₹3000</p>
                                 </div>
-                                <div className="col s4">
+                                <div className="col s12 m12 l4">
                                     <p><span>Category: </span>Mobile Phones</p>
                                     <p><span>Specifications: </span>4GB/64GB, 48mP, 5000mAH</p>
                                     <p><span>Stock: </span>50</p>

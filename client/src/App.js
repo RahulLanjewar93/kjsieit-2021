@@ -37,7 +37,7 @@ function App() {
                 <Route path='/Header'>
                     <Header></Header>
                 </Route>
-                <Route path='/dashboard'>
+                <Route path='/DashboardTable'>
                     <DashboardTable></DashboardTable>
                 </Route>
             </Switch>
