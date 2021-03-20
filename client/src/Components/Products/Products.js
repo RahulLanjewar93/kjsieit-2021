@@ -1,52 +1,69 @@
-import React from 'react'
+import {React,useState,useEffect} from 'react'
 import MuiAlert from '@material-ui/lab/Alert';
-import {useState} from 'react'
+
 function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 
-
 const Products = () => {
-    const [name,setName] = useState('')
-    const [description,setDescription] = useState('')
+    const products = []
 
-    const addCategory = async (e)=> {
-        e.preventDefault();
-        const res = await fetch('/category', {
-            method: "post",
+    const getProducts = async()=> {
+        const res = await fetch('/products', {
+            method: "get",
             headers: {
                 "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ name:name,description:description })
+            }
         })
         const data = await res.json()
         console.log(data)
-        if (data.error) {
-            <Alert severity="error">Some Error Occured:{data.error}</Alert>
+        products.push(data)
+        console.log(products)
+        if (!data) {
+            <Alert severity="error">Some Error Occured</Alert>
         } else {
-            <Alert Alert severity="success" > Logged In Successfully</Alert >
+            <Alert Alert severity="success" > Successfully</Alert >
         }
     }
 
+    useEffect(()=>{
+        getProducts();
+    },[])
     return (
-        <div class="row">
-            <form class="col s12" >
-            <div class="row">
-                <div class="input-field col s6">
-                <input onChange={(e)=>{setName(e.target.value)}} id="first_name" type="text" class="validate"></input>
-                <label for="first_name">Category Name</label>
+        <>
+        <div className='container'>
+          <div className='row'>
+            <div className='col s12'>
+                <div className='section'>
+                  <h4>All Products WOW</h4>
+                  <div className='divider'></div>
+                  <div className="section row">
+                    {products.forEach((product)=>{
+                        return(
+                            <div class="col s12 m6" key={product._id}>
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img src="https://images.unsplash.com/photo-1612831661941-254341b885e9?ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1225&q=80" alt='product_image'></img>
+                                    </div>
+                                    <div class="card-content">
+                                        <span class="card-title">{product.name}</span>
+                                        <span class="card-subtitle grey-text">{product.price}</span>
+                                        <p>Product Description {product.specification}</p>
+                                        <p></p>
+                                        <p></p>
+                                        <p>Company Name : {product.companyName}</p>
+                                    </div>
+                                </div>
+                        </div>
+                        )
+                    })}
                 </div>
-                <div class="input-field col s6">
-                <input  onChange={(e)=>{setDescription(e.target.value)}} id="last_name" type="text" class="validate"></input>
-                <label for="last_name">Category Description</label>
-                </div>
-                <div class="input-field col s6">
-                <input  onClick={(e)=>{addCategory(e)}} id="Submit" type="submit" class="validate"></input>
                 </div>
             </div>
-            </form>
+            </div>
         </div>
-    )
+        </>
+    );
 }
 
 export default Products
