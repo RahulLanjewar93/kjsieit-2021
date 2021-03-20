@@ -103,14 +103,15 @@ app.post('/signin', (req, res) => {
 });
 
 app.post('/products',async(req,res)=>{
-    const { name,price,category,companyName } = req.body
-    if (!(name && price && companyName && category)){
-        return res.json({error:"Please Enter all fields"})
+    console.log(req.body)
+    const { price,category,companyName,specification,modelName,stock } = req.body
+    if (!( price && companyName && category && specification && modelName && stock)){
+        return res.json({error:"Some Fields Are missing"})
     }
     try {
         const nameCheck = await Product.find({name:name})
         if (nameCheck.length === 0) {
-            const result =  await Product.insertMany({name,price,companyName,category})
+            const result =  await Product.insertMany({name,price,companyName,category,specification,modelName,stock})
             return res.json(result)
         }
         return res.json({error:"Product Name Already Exists"})

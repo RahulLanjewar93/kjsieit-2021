@@ -11,12 +11,9 @@ const categorySchema = Schema({
         type:String,
         required:true
     },
-    imageName:{
+    image:[{
         type:String
-    },
-    imageUrl:{
-        type:String,
-    },
+    }]
 })
 
 module.exports = mongoose.model('Category',categorySchema)

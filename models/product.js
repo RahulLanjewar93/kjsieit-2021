@@ -1,36 +1,36 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const imageSchema = Schema({
-    imageUrl:{
-        type:String,
-    },
-    fileName:{
-        type:String,
-    }
-})
-
 const productSchema = Schema({
-    name:{
+    images:[{
         type:String,
         required:true,
-        unique:true,
+    }],
+    companyName:{
+        type:String,
+        required:true
+    },
+    modelName:{
+        type:String,
+        required:true,
     },
     price:{
         type:Number,
         required:true,
     },
-    companyName:{
-        type:String,
-        required:true
-    },
-    images:{
-        type:String,
-    },
     category:{
         type:Schema.Types.ObjectId,
-        ref:'Category'
-    }
+        ref:'Category',
+        required:true,
+    },
+    specifications:{
+        type:String,
+        required:true,
+    },
+    stock:{
+        type:Number,
+        required:true,
+    },
 })
 
 module.exports = mongoose.model('Product',productSchema)
