@@ -6,7 +6,7 @@ function Alert(props) {
 }
 
 
-const Categories = () => {
+const Products = () => {
     const [name,setName] = useState('')
     const [description,setDescription] = useState('')
 
@@ -29,24 +29,24 @@ const Categories = () => {
     }
 
     return (
-        <div class="row center-align">
-            <form class="col s6" >
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input onChange={(e)=>{setName(e.target.value)}} id="first_name" type="text" class="validate"></input>
-                        <label for="first_name">Category Name</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input  onChange={(e)=>{setDescription(e.target.value)}} id="last_name" type="text" class="validate"></input>
-                        <label for="last_name">Category Description</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input  onClick={(e)=>{addCategory(e)}} id="Submit" type="submit" class="validate"></input>
-                    </div>
+        <div class="row">
+            <form class="col s12" >
+            <div class="row">
+                <div class="input-field col s6">
+                <input onChange={(e)=>{setName(e.target.value)}} id="first_name" type="text" class="validate"></input>
+                <label for="first_name">Category Name</label>
                 </div>
+                <div class="input-field col s6">
+                <input  onChange={(e)=>{setDescription(e.target.value)}} id="last_name" type="text" class="validate"></input>
+                <label for="last_name">Category Description</label>
+                </div>
+                <div class="input-field col s6">
+                <input  onClick={(e)=>{addCategory(e)}} id="Submit" type="submit" class="validate"></input>
+                </div>
+            </div>
             </form>
         </div>
     )
 }
 
-export default Categories
+export default Products
