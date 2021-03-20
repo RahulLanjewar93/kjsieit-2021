@@ -62,7 +62,7 @@ app.get('/product',async(req,res)=>{
 
 app.post('/category',async(req,res)=>{
     const { name,description,imageUrl,imageName} = req.body
-    if (!(name && description && imageUrl && imageName)){
+    if (!(name && description)){
         return res.json({error:"Please Enter all fields"})
     }
     try {
