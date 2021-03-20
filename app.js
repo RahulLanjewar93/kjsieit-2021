@@ -102,15 +102,15 @@ app.post('/signin', (req, res) => {
     })
 });
 
-app.post('/product',async(req,res)=>{
-    const { name,price,category,companyName, } = req.body
+app.post('/products',async(req,res)=>{
+    const { name,price,category,companyName } = req.body
     if (!(name && price && companyName && category)){
         return res.json({error:"Please Enter all fields"})
     }
     try {
         const nameCheck = await Product.find({name:name})
         if (nameCheck.length === 0) {
-            const result =  await Product.insertMany({name,price,companyName})
+            const result =  await Product.insertMany({name,price,companyName,category})
             return res.json(result)
         }
         return res.json({error:"Product Name Already Exists"})
@@ -119,10 +119,11 @@ app.post('/product',async(req,res)=>{
     }
 })
 
-app.get('/product',async(req,res)=>{
+app.get('/products',async(req,res)=>{
     const result = await Product.find().populate('category')
     console.log(result)
     res.json(result)
+
 })
 
 app.post('/category',async(req,res)=>{
@@ -147,6 +148,7 @@ app.get('/category',async(req,res)=>{
     console.log(result)
     res.json(result)
 })
+
 
 app.listen(PORT, () => {
     console.log(`Listening on ${PORT}`)
