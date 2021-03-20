@@ -10,8 +10,9 @@ import SideNav from './Components/SideNav';
 function App() {
   return (
     <Router>
-      <Switch>
+      <Route path='/'>
       <SideNav/>
+      </Route>
       <Route path='/signup'>
            <SignUp></SignUp>
         </Route>
@@ -27,7 +28,7 @@ function App() {
         <Route path='/DashboardTable'>
           <DashboardTable></DashboardTable>
           </Route>
-      </Switch>
+
     </Router>
   );
 }

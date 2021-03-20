@@ -13,7 +13,7 @@ function SideNav() {
             </div>
         </nav>
 
-        <ul id="slide-out" className="sidenav sidenav-fixed">
+        <ul id="slide-out" className="sidenav">
             <li><div className="user-view">
             <div className="background">
                 <img src="https://images.unsplash.com/photo-1432847712612-926caafaa802?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHw%3D&w=1000&q=80"/>
