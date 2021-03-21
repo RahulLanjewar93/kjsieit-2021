@@ -13,10 +13,10 @@ const DashboardTable = ()=> {
             const data = await res.json()
             console.log(data)
             if (data.length === 0 ){
-                return M.toast({html: `All Stocks Are Greater than 50`,classes:'rounded green'})
+                return M.toast({html: `All Stocks Are Greater than 50`,classes:'green'})
             }
             data.map((product)=>{
-                M.toast({html: `Low stocks for Product:${product.modelName},Value:${product.stock} `,classes:'rounded orange'})
+                M.toast({html: `Low stocks for Product:${product.modelName},Value:${product.stock} `,classes:'orange'})
             })
         }
 

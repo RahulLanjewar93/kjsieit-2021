@@ -68,7 +68,6 @@ app.get('/products',async(req,res)=>{
     const result = await Product.find().populate('category')
     console.log(result)
     res.json(result)
-
 })
 
 app.post('/category',async(req,res)=>{

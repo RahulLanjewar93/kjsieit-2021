@@ -45,11 +45,11 @@ const Routing = ()=>{
                 <Route path='/category'>
                     <AddCategory></AddCategory>
                 </Route>
-                <Route exact path='/product'>
-                    <AddProduct></AddProduct>
-                </Route>
                 <Route path='/product/:id'>
                     <ShowProduct></ShowProduct>
+                </Route>
+                <Route exact path='/product'>
+                    <AddProduct></AddProduct>
                 </Route>
                 <Route path='/dashboard'>
                     <DashboardTable></DashboardTable>
