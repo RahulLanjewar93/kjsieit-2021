@@ -1,15 +1,20 @@
-import {React,useState} from 'react'
+import {React,useState,useEffect} from 'react'
+import useHistory from 'react-router-dom'
+import M from 'materialize-css'
 
 const Product = () => {
+    const [loading,setLoading] = useState(false)
     const [companyName,setCompanyName] = useState('')
-    const [specification,setSpecification] = useState('')
+    const [specifications,setSpecifications] = useState('')
     const [modelName,setModelName] = useState('')
     const [price,setPrice] = useState(0)
     const [stock,setStock] = useState(0)
+    const [category,setCategory]=useState('')
+    const [categories,setCategories] = useState([])
 
     const addProduct = async(e)=> {
-        const product = {companyName,specification,modelName,price,stock}
-        console.log(product)
+        setLoading(true)
+        const product = {modelName,companyName,specifications,modelName,price,stock,category}
         e.preventDefault();
         const res = await fetch('/products', {
             method: "post",
@@ -20,7 +25,32 @@ const Product = () => {
         })
         const data = await res.json()
         console.log(data)
+        if (data.error){
+            return M.toast({html: `${data.error}`,classes:'rounded red'})
+        }
+        M.toast({html: 'Created Product Successfully',classes:'rounded green'})
+        setLoading(false)
     }
+
+    const getCategories = async()=> {
+        const res = await fetch('/category', {
+            method: "get",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+        const data = await res.json()
+        console.log(data)
+        setCategories(data)
+        if (data.error){
+            return M.toast({html: `${data.error}`,classes:'rounded red'})
+        }
+        M.toast({html: 'Fetched Category Successfully',classes:'rounded green'})
+    }
+
+    useEffect(()=>{
+        getCategories()
+    },[])
     return (
         <div classNameName='section row'>
             <div className='col container'>
@@ -42,19 +72,22 @@ const Product = () => {
                         </div>
                         <div className="input-field col s12">
                             <label for="specifications">Specifications</label>
-                            <textarea onChange={(e)=>{setSpecification(e.target.value)}} style={{border:'none',borderBottom:'1px solid #9e9e9e'}} id="specifications" type="number" className="validate"></textarea>
+                            <textarea onChange={(e)=>{setSpecifications(e.target.value)}} style={{border:'none',borderBottom:'1px solid #9e9e9e'}} id="specifications" type="number" className="validate"></textarea>
                         </div>
                         <div className="input-field col s12">
                             <input onChange={(e)=>{setStock(e.target.value)}} id="stock" type="number" className="validate"></input>
                             <label for="stock">Stock</label>
                         </div>
                         <div className="input-field col s12">
-                            <select className='browser-default' onChange={(e)=>{setStock(e.target.value)}}>
-                                <option value='default' selected>Default For Now</option>
+                            <select className='browser-default' onChange={(e)=>{setCategory(e.target.value)}}>
+                                <option value='default'>Default For Now</option>
+                               {categories.map((category)=>{
+                                    return <option key={category._id} value={category._id}>{category.name}</option>
+                                })}
                             </select>
                         </div>
                         <div className="input-field col s12">
-                            <input id="submit" type="submit" className="validate btn blue"></input>
+                            <input id="submit" type="submit" className={loading?"validate btn blue dsiabled ":"validate btn blue"}></input>
                         </div>
                     </div>
                 </form>
