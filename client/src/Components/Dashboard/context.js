@@ -55,7 +55,6 @@ class ProductProvider extends Component {
               Alldata:[...this.state.Alldata],
               id:"",title:"",price:"",company:""
           })
-          
       }
       else{
           const MaxId=Math.max(...this.state.Alldata.map(item=>item.id));
@@ -68,7 +67,6 @@ class ProductProvider extends Component {
             Alldata:[...this.state.Alldata],
             id:"",title:"",price:"",company:""
         })
-
       }
   }
   onDelete=(id)=>{
@@ -76,7 +74,7 @@ class ProductProvider extends Component {
       this.setState({
           Alldata:tempProduct
       })
-      
+
 
   }
   render() {

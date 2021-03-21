@@ -10,7 +10,7 @@ import { Table, Button } from "react-bootstrap";
         <ProductConsumer>
             {(value)=>{
                 return(
-                    <Table size="sm" variant="dark" striped border hover>
+                    <Table className='striped' striped border hover>
                         <thead>
                             <tr>
                                 <th>Title</th>
@@ -35,7 +35,7 @@ import { Table, Button } from "react-bootstrap";
                                         <td><Button size="sm" variant="primary" onClick={()=>{value.onEdit(product.id)}}>Edit</Button>|
                                        <Button size="sm" variant="danger" onClick={()=>{value.onDelete(product.id)}}>Delete</Button></td>
                                     </tr>
-                                    
+
                                 )
                             })}
                         </tbody>
