@@ -33,9 +33,10 @@ const ShowOrder = () => {
         setCustomerPhone(data.customerPhone)
         setAgentName(data.agentName)
         setProducts({
-            name:data.productInfo.modelame,
+            name:data.productInfo.modelName,
             price:data.productInfo.price
         })
+        console.log(products.name)
         if (data.error){
             return M.toast({html: `${data.error}`,classes:'rounded red'})
         }
