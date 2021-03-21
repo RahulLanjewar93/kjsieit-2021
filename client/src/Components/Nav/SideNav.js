@@ -1,14 +1,37 @@
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
+import {useContext} from 'react'
+import {UserContext} from '../../App'
 
 function SideNav() {
+    const {state,dispatch} = useContext(UserContext)
+    const history = useHistory()
+    const renderList = ()=>{
+        if(state){
+            return [
+                <li><Link to="/dashboard">Product Inventory</Link></li>,
+                <li><Link to="/products">View Sales</Link></li>,
+                <li><Link to="#!">Update Inventory</Link></li>,
+                <li><Link to="/addAgent">Add Agent</Link></li>,
+                <li><Link to="/product">Add Product</Link></li>,
+                <li><Link to="/category">Add Category</Link></li>,
+                <li><a href="#" onClick={()=>{
+                    localStorage.clear()
+                    dispatch({type:"CLEAR"})
+                    history.push('/')
+                }}>Logout</a></li>
+
+            ]
+        }
+    }
     return (
         <div>
             <nav>
                 <div className="nav-wrapper" style={{'backgroundColor':'#b4eeb4'}}>
-                    <Link to="#" className="brand-logo center">Inventory</Link>
+                    <Link to="#" className="brand-logo right">Inventory</Link>
                     <Link to="#" data-target="slide-out" className="sidenav-trigger show-on-large"><i className="material-icons">menu</i></Link>
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
-                        <li><Link to="#">Log Out</Link></li>
+                        
+                        
                     </ul>
                 </div>
             </nav>
@@ -22,12 +45,7 @@ function SideNav() {
                     <a href="#name"><span className="white-text name">Admin</span></a>
                     <a href="#email"><span className="white-text email"></span></a>
                 </div></li>
-                <li><Link to="/dashboard">Product Inventory</Link></li>
-                <li><Link to="/products">View Sales</Link></li>
-                <li><Link to="#!">Update Inventory</Link></li>
-                <li><Link to="/addAgent">Add Agent</Link></li>
-                <li><Link to="/product">Add Product</Link></li>
-                <li><Link to="/category">Add Category</Link></li>
+                {renderList()}
             </ul>
 
         </div>
