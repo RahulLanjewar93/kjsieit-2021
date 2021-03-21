@@ -90,7 +90,7 @@ const Product = () => {
                             </select>
                         </div>
                         <div className="input-field col s12">
-                            <input id="submit" type="submit" className={loading?"validate btn blue dsiabled ":"validate btn blue"}></input>
+                            <input id="submit" type="submit" className={loading?"validate btn deep-purple dsiabled ":"validate btn deep-purple"}></input>
                         </div>
                     </div>
                 </form>
