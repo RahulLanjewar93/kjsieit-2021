@@ -19,7 +19,6 @@ class DashboardTable extends Component {
                                 </tr>
                             </div>
                         </li>
-                        <hr />
                         <li>
                             <div className="collapsible-header">
                                 <tr className="headrow">

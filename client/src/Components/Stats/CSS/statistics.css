@@ -1,0 +1,43 @@
+.todaysales{
+    margin: 3vmin;
+    margin-bottom: 1vmin;
+    font-size: 2.6vmin;
+    font-weight: bold;
+}
+
+.card-panel{
+    background-color: rgb(255, 225, 225);
+}
+
+.card-panel span{
+    font-size: 3vmin;
+    padding: 0;
+    margin: 0;
+}
+
+.card-panel p{
+    font-size: 7vmin;
+    padding: 0;
+    margin: 0;
+}
+
+table {
+    width: 90vw;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+th {
+    background-color: rgb(255, 169, 169);
+}
+
+td {
+    margin: 0vmin;
+    padding: 1vmin;
+}
+
+.productimg{
+    height: 5vmin;
+    width: auto;
+}
