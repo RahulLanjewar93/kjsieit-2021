@@ -17,14 +17,15 @@ function App() {
     return (
         <Router>
             <SideNav></SideNav>
-            <Header></Header>
-            <Switch>
-                <Route path='/signup'>
-                    <SignUp></SignUp>
-                </Route>
-                <Route path='/signin'>
+            <Route exact path='/'>
                     <SignIn></SignIn>
                 </Route>
+
+            <Switch>
+                <Route path='/addAgent'>
+                    <SignUp></SignUp>
+                </Route>
+                
                 <Route path='/categories'>
                     <Categories></Categories>
                 </Route>
