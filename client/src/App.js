@@ -12,6 +12,8 @@ import SideNav from './Components/Nav/SideNav';
 import AddAgent from './Components/Dashboard/addAgent';
 import Statistics from './Components/Stats/Statistics';
 import { reducer, initialState } from './reducers/userReducer'
+import Home from './Components/Dashboard/home';
+
 
 export const UserContext = createContext()
 
@@ -34,7 +36,7 @@ const Routing = ()=>{
                     <SignUp></SignUp>
                 </Route>
                 <Route path='/Update'>
-                    <Update/>
+                    <Home/>
                 </Route>
 
                 <Route path='/categories'>
