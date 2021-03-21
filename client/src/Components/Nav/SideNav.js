@@ -9,11 +9,13 @@ function SideNav() {
         if(state){
             return [
                 <li><Link to="/dashboard">Product Inventory</Link></li>,
-                <li><Link to="/products">View Sales</Link></li>,
+                <li><Link to="/stats">View Sales</Link></li>,
                 <li><Link to="/Update">Update Inventory</Link></li>,
                 <li><Link to="/addAgent">Add Agent</Link></li>,
                 <li><Link to="/product">Add Product</Link></li>,
                 <li><Link to="/category">Add Category</Link></li>,
+                <li><Link to="/order">Place Order</Link></li>,
+                <li><Link to="/stats">Show Stats</Link></li>,
                 <li><a href="#" onClick={()=>{
                     localStorage.clear()
                     dispatch({type:"CLEAR"})
@@ -29,8 +31,8 @@ function SideNav() {
                 <div className="nav-wrapper deep-purple">
                     <Link to="#" data-target="slide-out" className="sidenav-trigger show-on-large"><i className="material-icons">menu</i></Link>
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
-                        
-                        
+
+
                     </ul>
                 </div>
             </nav>

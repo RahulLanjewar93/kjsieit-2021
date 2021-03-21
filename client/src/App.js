@@ -11,6 +11,8 @@ import AddCategory from './Components/Categories/AddCategory'
 import SideNav from './Components/Nav/SideNav';
 import AddAgent from './Components/Dashboard/addAgent';
 import Statistics from './Components/Stats/Statistics';
+import AddOrders from './Components/Orders/AddOrder'
+import ShowOrders from './Components/Orders/ShowOrder'
 import { reducer, initialState } from './reducers/userReducer'
 import Home from './Components/Dashboard/home';
 
@@ -60,8 +62,13 @@ const Routing = ()=>{
                 <Route path='/stats'>
                     <Statistics></Statistics>
                 </Route>
+                <Route  exact path='/order/:id'>
+                    <ShowOrders></ShowOrders>
+                </Route>
+                <Route path='/order'>
+                    <AddOrders></AddOrders>
+                </Route>
             </Switch>
-
     );
 }
 
