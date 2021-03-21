@@ -6,7 +6,7 @@ import { Table, Button } from "react-bootstrap";
   render() {
     return (
       <div className="container">
-        <h3>UPDATE </h3>
+        <h3 text-align="center">UPDATE  INVENTORY</h3>
         <ProductConsumer>
             {(value)=>{
                 return(

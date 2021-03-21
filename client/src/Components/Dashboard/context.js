@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Product from "../Products/Product";
+
 import { rowData } from "./appData";
 
 const ProductContext = React.createContext();

@@ -25,7 +25,7 @@ const Category = () => {
         }
         M.toast({html: 'Created Category Successfully',classes:'rounded green'})
         console.log(data)
-        history.push(`/category/${data._id}`)
+        history.push(`/product`)
     }
     return (
         <div classNameName='section row'>
@@ -43,7 +43,7 @@ const Category = () => {
                             <label for="description">Description</label>
                         </div>
                         <div className="input-field col s12">
-                            <input id="submit" type="submit" className={loading?"validate btn blue disabled":"validate btn blue"}></input>
+                            <input id="submit" type="submit" className={loading?"validate btn deep-purple disabled":"validate btn deep-purple"}></input>
                         </div>
                     </div>
                 </form>

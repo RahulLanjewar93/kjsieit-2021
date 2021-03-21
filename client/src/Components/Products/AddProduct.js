@@ -1,5 +1,5 @@
 import {React,useState,useEffect} from 'react'
-import useHistory from 'react-router-dom'
+import {useHistory} from 'react-router-dom'
 import M from 'materialize-css'
 
 const Product = () => {
@@ -11,6 +11,8 @@ const Product = () => {
     const [stock,setStock] = useState(0)
     const [category,setCategory]=useState('')
     const [categories,setCategories] = useState([])
+
+    const history = useHistory()
 
     const addProduct = async(e)=> {
         setLoading(true)
@@ -30,6 +32,7 @@ const Product = () => {
         }
         M.toast({html: 'Created Product Successfully',classes:'rounded green'})
         setLoading(false)
+        history.push(`/product/${data._id}`)
     }
 
     const getCategories = async()=> {
@@ -87,7 +90,7 @@ const Product = () => {
                             </select>
                         </div>
                         <div className="input-field col s12">
-                            <input id="submit" type="submit" className={loading?"validate btn blue dsiabled ":"validate btn blue"}></input>
+                            <input id="submit" type="submit" className={loading?"validate btn deep-purple dsiabled ":"validate btn deep-purple"}></input>
                         </div>
                     </div>
                 </form>
