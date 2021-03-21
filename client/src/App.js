@@ -33,6 +33,9 @@ const Routing = ()=>{
                 <Route path='/addAgent'>
                     <SignUp></SignUp>
                 </Route>
+                <Route path='/Update'>
+                    <Update/>
+                </Route>
 
                 <Route path='/categories'>
                     <ShowCategory></ShowCategory>

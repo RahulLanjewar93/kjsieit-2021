@@ -10,7 +10,7 @@ function SideNav() {
             return [
                 <li><Link to="/dashboard">Product Inventory</Link></li>,
                 <li><Link to="/products">View Sales</Link></li>,
-                <li><Link to="#!">Update Inventory</Link></li>,
+                <li><Link to="/Update">Update Inventory</Link></li>,
                 <li><Link to="/addAgent">Add Agent</Link></li>,
                 <li><Link to="/product">Add Product</Link></li>,
                 <li><Link to="/category">Add Category</Link></li>,
@@ -26,8 +26,7 @@ function SideNav() {
     return (
         <div>
             <nav>
-                <div className="nav-wrapper" style={{'backgroundColor':'#b4eeb4'}}>
-                    <Link to="#" className="brand-logo right">Inventory</Link>
+                <div className="nav-wrapper deep-purple">
                     <Link to="#" data-target="slide-out" className="sidenav-trigger show-on-large"><i className="material-icons">menu</i></Link>
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
                         
