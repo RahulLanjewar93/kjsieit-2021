@@ -56,13 +56,12 @@ const useStyles = makeStyles((theme) => ({
 export default function SignIn() {
     const classes = useStyles();
 
-    const [email, setEmail] = useState('')
+    const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
-    const [rememberMe, setRememberMe] = useState(false)
 
     const signIn = async (e) => {
         e.preventDefault();
-        const userDetails = { email: email, password: password, rememberMe: rememberMe }
+        const userDetails = { username: username, password: password}
         const res = await fetch('/signin', {
             method: "post",
             headers: {
@@ -77,9 +76,8 @@ export default function SignIn() {
         } else {
             <Alert Alert severity="success" > Logged In Successfully</Alert >
         }
-        setEmail('')
+        setUsername('')
         setPassword('')
-        setRememberMe(false)
     }
 
     return (
@@ -94,14 +92,14 @@ export default function SignIn() {
                 </Typography>
                 <form className={classes.form} noValidate>
                     <TextField
-                        onChange={(e) => { setEmail(e.target.value) }}
-                        value={email}
+                        onChange={(e) => { setUsername(e.target.value) }}
+                        value={username}
                         variant="outlined"
                         margin="normal"
                         required
                         fullWidth
                         id="email"
-                        label="Email Address"
+                        label="Username"
                         name="email"
                         autoComplete="email"
                         autoFocus
@@ -118,10 +116,6 @@ export default function SignIn() {
                         type="password"
                         id="password"
                         autoComplete="current-password"
-                    />
-                    <FormControlLabel
-                        control={<Checkbox value="remember" color="primary" onChange={() => { setRememberMe(!rememberMe) }} />}
-                        label="Remember me"
                     />
                     <Button
                         onClick={signIn}
