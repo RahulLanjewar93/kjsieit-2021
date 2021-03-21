@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react'
+import {Link} from 'react-dom'
 
 const ProductList = () =>{
     const [data,setData] = useState([])
@@ -17,39 +18,36 @@ const ProductList = () =>{
     },[])
     return(
 
-        <div className="container" style={{display:'grid'}}>
+        <div className="container">
+          <div className="row">
               {
                  data.map(item=>{
                  return(
-                    
-      
-                    <div className="row">
-                      <div className="col L3" style={{padding:"1px"}}>
+
+
+                      <div className="col m6" style={{padding:"1px 20px 1px"}}>
                         <div className="card">
                           <div className="card-image">
-                            <img src="image.jpg" />
-                            
                           </div>
                           <div className="card-content">
                             <h4>
-                              {item.modalName}
+                              {item.modelName}
                             </h4>
                             <p>
-                              {item.Price}
+                              {item.price}
                             </p>
                             <p>
                               {item.companyName}
                             </p>
                           </div>
                           <div className="card-action">
-                            <a href="#">This is a link</a>
                           </div>
                         </div>
                       </div>
-                      </div>
                  )
-              })
-            }
+                })
+              }
+              </div>
 
         </div>
     )
