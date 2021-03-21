@@ -12,6 +12,7 @@ const {isLoggedIn} = require('./middlewares/isLoggedIn')
 const Product = require('./models/product')
 const Category = require('./models/category')
 const User = require('./models/user')
+const Order = require('./models/order')
 
 //MongoStore
 const MongoDBStore = require('connect-mongo');
@@ -66,6 +67,31 @@ app.post('/products',async(req,res)=>{
 
 app.get('/products',async(req,res)=>{
     const result = await Product.find().populate('category')
+    console.log(result)
+    res.json(result)
+})
+
+app.get('/orders/:id',async(req,res)=>{
+    const {id} = req.params
+    const result = await Order.findById({_id:id}).populate('productInfo')
+    res.json(result)
+})
+
+app.post('/orders',async(req,res)=>{
+    const { customerName,customerPhone,customerAddress,productInfo,agentName } = req.body
+    if (!( customerName && customerPhone && customerAddress && productInfo && agentName)){
+        return res.json({error:"Some Fields Are missing"})
+    }
+    try {
+        const result =  await Order.insertMany({customerName,customerPhone,customerAddress,productInfo,agentName})
+        return res.json(...result)
+    }catch(error){
+        res.json({error:error.message})
+    }
+})
+
+app.get('/orders',async(req,res)=>{
+    const result = await Order.find().populate('Product')
     console.log(result)
     res.json(result)
 })
