@@ -8,8 +8,8 @@ import Product from './Components/Products/Product'
 import DashboardTable from './Components/Dashboard/DashboardTable'
 import Categories from './Components/Categories/Categories'
 import Category from './Components/Categories/Category'
-import SideNav from './Components/Dashboard/SideNav';
-import Header from './Components/Dashboard/Header'
+import SideNav from './Components/Nav/SideNav';
+import Header from './Components/Nav/Header'
 import AddAgent from './Components/Dashboard/addAgent';
 import Statistics from './Components/Stats/Statistics'
 
