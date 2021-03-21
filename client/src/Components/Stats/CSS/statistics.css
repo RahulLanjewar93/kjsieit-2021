@@ -1,7 +1,6 @@
-.todaysales{
-    margin: 2vmin;
-    padding-left: 1vmin;
-    padding-right: 1vmin;
+/* .todaysales {
+    margin: 3vmin;
+    margin-bottom: 1vmin;
     font-size: 2.3vmin;
     font-weight: bold;
     width: 15vw;
@@ -16,18 +15,13 @@
 
 }
 
-.card-panel{
-    background: linear-gradient(#eeb4b4, #f0cdcd);
-    border-radius: 0.5vmin;
-}
-
-.card-panel span{
+.card-panel span {
     font-size: 3vmin;
     padding: 0;
     margin: 0;
 }
 
-.card-panel p{
+.card-panel p {
     font-size: 7vmin;
     padding: 0;
     margin: 0;
@@ -40,19 +34,15 @@ table {
     transform: translate(-50%);
 }
 
-th {
-    background-color: #b4b4ee;
-}
 
 td {
     margin: 0vmin;
     padding: 1vmin;
-    background-color: #f0eaa1;
 }
 
-.productimg{
+.productimg {
     height: 5vmin;
     width: auto;
     border: 0.1vmin solid #eeb4b4;
     border-radius: 0.5vmin;
-}
+} */
