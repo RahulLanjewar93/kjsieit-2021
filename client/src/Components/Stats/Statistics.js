@@ -5,7 +5,15 @@ class Statistics extends Component {
     render() {
         return (
             <div>
-                <p className="todaysales">Today's Sales:</p>
+                <p className="todaysales row">
+                    <select className="timeperiod col s3 l3" name="timeperiod" id="timeperiod">
+                        <option value="Today">Today</option>
+                        <option value="ThisWeek">This Week</option>
+                        <option value="ThisMonth">This Month</option>
+                        <option value="ThisQuarter">This Quarter</option>
+                        <option value="ViewPevious">View Previous</option>
+                    </select>
+                </p>
                 <div className="statcard-container row">
                     <div className="statcard col s6 m6 l3">
                         <div className="card-panel">
@@ -35,6 +43,7 @@ class Statistics extends Component {
                 <table className="centered">
                     <thead>
                         <tr>
+                            <th>Date</th>
                             <th>Image</th>
                             <th>Model Name</th>
                             <th>Category</th>
@@ -45,6 +54,7 @@ class Statistics extends Component {
 
                     <tbody>
                         <tr>
+                            <td>21-03-2021</td>
                             <td><img className="productimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-cIM0mLfHYvMSTnjhxgPRtE-HwMCXp5QYVA&usqp=CAU" alt="product" /></td>
                             <td>Nokia 2233</td>
                             <td>Mobile Phones</td>
@@ -52,6 +62,7 @@ class Statistics extends Component {
                             <td>30</td>
                         </tr>
                         <tr>
+                            <td>21-03-2021</td>
                             <td><img className="productimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-cIM0mLfHYvMSTnjhxgPRtE-HwMCXp5QYVA&usqp=CAU" alt="product" /></td>
                             <td>Nokia 2233</td>
                             <td>Mobile Phones</td>
@@ -59,6 +70,7 @@ class Statistics extends Component {
                             <td>30</td>
                         </tr>
                         <tr>
+                            <td>21-03-2021</td>
                             <td><img className="productimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-cIM0mLfHYvMSTnjhxgPRtE-HwMCXp5QYVA&usqp=CAU" alt="product" /></td>
                             <td>Nokia 2233</td>
                             <td>Mobile Phones</td>

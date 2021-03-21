@@ -1,16 +1,21 @@
+html{
+    background-color: rgb(235, 248, 255);
+}
+
 .table-container{
     margin: 15vmin;
     margin-top: 2vmin;
 }
 
-.tableheadrow{
+.tableheadrow th{
     margin: 0;
-    background-color: rgb(255, 169, 169);
+    background-color: rgb(255,102,128);
 }
 
 .tableheadrow , .headrow td, th{
     width: 20vw;
     text-align: center;
+    background-color: rgb(255,230,102);
 }
 
 .collapsible-header{
@@ -21,14 +26,15 @@
 .headrow img{
     height: 6vmin;
     width: auto;
-    border: 0.1vmin solid rgb(255, 169, 169);
+    border: 0.1vmin solid rgb(255,230,102);
     border-radius: 0.5vmin;
     margin-right: 4vmin;
 }
 
 .collapsible-body{
     text-align: center;
-    background-color: rgb(255, 225, 225);
+    background: linear-gradient(rgb(153,102,255), rgb(179, 141, 255));
+    margin: 0;
 }
 
 .collapsible-body img{
