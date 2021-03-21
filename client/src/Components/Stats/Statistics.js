@@ -5,7 +5,7 @@ import M from 'materialize-css'
 class Statistics extends Component {
     render() {
         return (
-            <div>
+            <div className>
                 <h4 style={{margin:'3vmin'}}>Sales Stats</h4>
                 <div className="statcard-container row">
                     <div className="statcard col s6 m6 l3">

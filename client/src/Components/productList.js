@@ -18,7 +18,7 @@ const ProductList = () =>{
     },[])
     return(
 
-        <div className="container">
+        <div className="container" style={{zIndex:'-99'}}>
           <div className="row">
               {
                  data.map(item=>{
