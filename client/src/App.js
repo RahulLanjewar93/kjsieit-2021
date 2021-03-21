@@ -3,13 +3,12 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import SignIn from './Components/Auth/SignIn'
 import SignUp from './Components/Auth/SignUp'
-import Products from './Components/Products/Products'
-import Product from './Components/Products/Product'
+import ShowProduct from './Components/Products/ShowProduct'
+import AddProduct from './Components/Products/AddProduct'
 import DashboardTable from './Components/Dashboard/DashboardTable'
-import Categories from './Components/Categories/Categories'
-import Category from './Components/Categories/Category'
+import ShowCategory from './Components/Categories/ShowCategory'
+import AddCategory from './Components/Categories/AddCategory'
 import SideNav from './Components/Nav/SideNav';
-import Header from './Components/Nav/Header'
 import AddAgent from './Components/Dashboard/addAgent';
 import Statistics from './Components/Stats/Statistics'
 
@@ -25,18 +24,18 @@ function App() {
                 <Route path='/addAgent'>
                     <SignUp></SignUp>
                 </Route>
-                
+
                 <Route path='/categories'>
-                    <Categories></Categories>
+                    <ShowCategory></ShowCategory>
                 </Route>
                 <Route path='/category'>
-                    <Category></Category>
+                    <AddCategory></AddCategory>
                 </Route>
-                <Route path='/products'>
-                    <Products></Products>
+                <Route exact path='/product'>
+                    <AddProduct></AddProduct>
                 </Route>
-                <Route path='/product'>
-                    <Product></Product>
+                <Route path='/product/:id'>
+                    <ShowProduct></ShowProduct>
                 </Route>
                 <Route path='/dashboard'>
                     <DashboardTable></DashboardTable>

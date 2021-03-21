@@ -25,7 +25,7 @@ const Category = () => {
         }
         M.toast({html: 'Created Category Successfully',classes:'rounded green'})
         console.log(data)
-        history.push(`/category/${data._id}`)
+        history.push(`/product`)
     }
     return (
         <div classNameName='section row'>
