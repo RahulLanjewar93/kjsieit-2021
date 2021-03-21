@@ -94,6 +94,12 @@ app.get('/category',async(req,res)=>{
     res.json(result)
 })
 
+app.get('/getlowstocks',async(req,res)=>{
+    const result = await Product.find({stock:{$lt:50}})
+    console.log(result)
+    res.json(result)
+})
+
 app.listen(PORT, () => {
     console.log(`Listening on ${PORT}`)
 })
