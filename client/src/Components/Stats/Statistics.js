@@ -5,7 +5,7 @@ import M from 'materialize-css'
 class Statistics extends Component {
     render() {
         return (
-            <div>
+            <div className='container'>
                 <p className="todaysales row #eeb4b4">
                     <select className="timeperiod col s3 l3" name="timeperiod" id="timeperiod">
                         <optgroup label="Select One">

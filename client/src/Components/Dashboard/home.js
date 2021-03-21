@@ -9,7 +9,7 @@ export default class Home extends Component {
                 <br/>
                 <br/>
                 <div className='divider grey'></div>
-                <h4>UPDATE  INVENTORY</h4>
+                <h4>Update Inventory</h4>
                 <div className='divider grey'></div>
                 <ProductConsumer>
                     {(value) => {

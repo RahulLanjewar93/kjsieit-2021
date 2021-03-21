@@ -68,7 +68,7 @@ const Routing = ()=>{
                 <Route path='/order'>
                     <AddOrders></AddOrders>
                 </Route>
-                <Route>
+                <Route path='/productList'>
                     <ProductList/>
                 </Route>
             </Switch>
