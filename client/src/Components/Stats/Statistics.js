@@ -6,17 +6,7 @@ class Statistics extends Component {
     render() {
         return (
             <div>
-                <p className="todaysales row #eeb4b4">
-                    <select className="timeperiod col s3 l3" name="timeperiod" id="timeperiod">
-                        <optgroup label="Select One">
-                            <option value="Today">Today</option>
-                            <option value="ThisWeek">This Week</option>
-                            <option value="ThisMonth">This Month</option>
-                            <option value="ThisQuarter">This Quarter</option>
-                            <option value="ViewPevious">View Previous</option>
-                        </optgroup>
-                    </select>
-                </p>
+                <h4 style={{margin:'3vmin'}}>Sales Stats</h4>
                 <div className="statcard-container row">
                     <div className="statcard col s6 m6 l3">
                         <div className="card-panel">
@@ -43,7 +33,7 @@ class Statistics extends Component {
                         </div>
                     </div>
                 </div>
-                <table className="centered">
+                <table className="centered" style={{ width: '90vw', position: 'relative', left: '50 %', transform: 'translate(-50 %)' }}>
                     <thead>
                         <tr>
                             <th>Date</th>
