@@ -1,3 +1,26 @@
 body {
-  font-family: "Lato", sans-serif;
+    font-family: "Lato", sans-serif;
+}
+
+.tabs .tab a {
+    color: #000;
+}
+
+.tabs .tab a:hover {
+    background-color: #ede7f6;
+    color: #000;
+}
+
+.tabs .tab a:focus.active {
+    background-color: #d1c4e9;
+    color: #000;
+}
+
+.tabs .tab a.active {
+    background-color: #d1c4e9;
+    color: #000;
+}
+
+.tabs .indicator {
+    background-color: #673ab7;
 }

@@ -57,8 +57,8 @@ const Routing = ()=>{
                     <DashboardTable></DashboardTable>
                 </Route>
                 <Route path='/addAgent'>
-                    <AddAgent/>
-                 </Route>
+                    <AddAgent />
+                </Route>
                 <Route path='/stats'>
                     <Statistics></Statistics>
                 </Route>

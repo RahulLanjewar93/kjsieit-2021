@@ -27,7 +27,7 @@ function SideNav() {
     }
     return (
         <div>
-            <nav>
+            <nav style={{position:'fixed'}}>
                 <div className="nav-wrapper deep-purple">
                     <Link to="#" data-target="slide-out" className="sidenav-trigger show-on-large"><i className="material-icons">menu</i></Link>
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
@@ -48,6 +48,7 @@ function SideNav() {
                 </div></li>
                 {renderList()}
             </ul>
+            <br/><br/><br/>
 
         </div>
     );

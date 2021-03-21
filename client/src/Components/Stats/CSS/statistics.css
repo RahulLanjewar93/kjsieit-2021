@@ -4,6 +4,15 @@
     font-size: 2.3vmin;
     font-weight: bold;
     width: 15vw;
+    background-color: #f0eaa1;
+    border: none;
+    outline: none;
+    border-radius: 0.5vmin;
+}
+
+.timeperiod options{
+    background-color: white;
+
 }
 
 .card-panel span {

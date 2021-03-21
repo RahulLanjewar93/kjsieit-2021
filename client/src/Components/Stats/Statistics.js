@@ -1,17 +1,20 @@
 import React, { Component } from 'react'
 import './CSS/statistics.css'
+import M from 'materialize-css'
 
 class Statistics extends Component {
     render() {
         return (
             <div>
-                <p className="todaysales row">
+                <p className="todaysales row #eeb4b4">
                     <select className="timeperiod col s3 l3" name="timeperiod" id="timeperiod">
-                        <option value="Today">Today</option>
-                        <option value="ThisWeek">This Week</option>
-                        <option value="ThisMonth">This Month</option>
-                        <option value="ThisQuarter">This Quarter</option>
-                        <option value="ViewPevious">View Previous</option>
+                        <optgroup label="Select One">
+                            <option value="Today">Today</option>
+                            <option value="ThisWeek">This Week</option>
+                            <option value="ThisMonth">This Month</option>
+                            <option value="ThisQuarter">This Quarter</option>
+                            <option value="ViewPevious">View Previous</option>
+                        </optgroup>
                     </select>
                 </p>
                 <div className="statcard-container row">
