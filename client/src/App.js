@@ -8,22 +8,23 @@ import AddProduct from './Components/Products/AddProduct'
 import DashboardTable from './Components/Dashboard/DashboardTable'
 import ShowCategory from './Components/Categories/ShowCategory'
 import AddCategory from './Components/Categories/AddCategory'
-import SideNav from './Components/Dashboard/SideNav';
-import Header from './Components/Dashboard/Header'
+import SideNav from './Components/Nav/SideNav';
+import AddAgent from './Components/Dashboard/addAgent';
 import Statistics from './Components/Stats/Statistics'
 
 function App() {
     return (
         <Router>
             <SideNav></SideNav>
-            <Header></Header>
-            <Switch>
-                <Route path='/signup'>
-                    <SignUp></SignUp>
-                </Route>
-                <Route path='/signin'>
+            <Route exact path='/'>
                     <SignIn></SignIn>
                 </Route>
+
+            <Switch>
+                <Route path='/addAgent'>
+                    <SignUp></SignUp>
+                </Route>
+
                 <Route path='/categories'>
                     <ShowCategory></ShowCategory>
                 </Route>
@@ -39,6 +40,9 @@ function App() {
                 <Route path='/dashboard'>
                     <DashboardTable></DashboardTable>
                 </Route>
+                <Route path='/addAgent'>
+                    <AddAgent/>
+                 </Route>
                 <Route path='/stats'>
                     <Statistics></Statistics>
                 </Route>

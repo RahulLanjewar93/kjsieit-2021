@@ -8,7 +8,7 @@ function AddAgent() {
     const [password,setPassword] = useState("")
     const [email,setEmail] = useState("")
     const createAgent = ()=>{
-        fetch("/signup",{
+        fetch("/addAgent",{
             method:"post",
             headers:{
                 "Content-Type":"application/json"
@@ -25,7 +25,7 @@ function AddAgent() {
             }
             else{
                 M.toast({html: data.message, classes:"#43a047 green darken-1"})
-                history.push('/login')
+                history.push('/DashBoard')
             }
         }).catch(error=>{
             console.log(error)
