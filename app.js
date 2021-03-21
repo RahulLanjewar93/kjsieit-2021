@@ -48,7 +48,6 @@ app.use(passport.session())
 
 //Mongoose
 const mongoose = require('mongoose');
-const { options } = require('joi');
 mongoose.connect(MONGOURL, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.connection.on('connected',()=>{console.log("Database Connection Successfull")})
 mongoose.connection.on('error',(error)=>{console.log("There was an error while connecting to the database",error)})
@@ -107,11 +106,10 @@ app.post('/products',async(req,res)=>{
     }
 })
 
-app.get('/products',async(req,res)=>{
-    const result = await Product.find().populate('category')
-    console.log(result)
+app.get('/products/:id',async(req,res)=>{
+    const {id} = req.params
+    const result = await Product.findById({_id:id}).populate('category')
     res.json(result)
-
 })
 
 app.post('/category',async(req,res)=>{
@@ -138,5 +136,5 @@ app.get('/category',async(req,res)=>{
 })
 
 app.listen(PORT, () => {
-    console.log(`Listening on ${PORT}`)
+    console.log(`Listening on ${PORT} Happy Serving`)
 })
