@@ -1,5 +1,5 @@
 html{
-    background-color: rgb(255, 251, 231);
+    background-color: rgb(5, 0, 27);
 }
 
 .table-container{
@@ -33,7 +33,7 @@ html{
 
 .collapsible-body{
     text-align: center;
-    background: linear-gradient(#b4eeb4, #d3eed3);
+    background: linear-gradient(#aaeeaa, #ddeedd);
     margin: 0;
 }
 
