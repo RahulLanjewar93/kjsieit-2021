@@ -68,7 +68,6 @@ app.get('/products',async(req,res)=>{
     const result = await Product.find().populate('category')
     console.log(result)
     res.json(result)
-
 })
 
 app.post('/category',async(req,res)=>{
@@ -90,6 +89,12 @@ app.post('/category',async(req,res)=>{
 
 app.get('/category',async(req,res)=>{
     const result = await Category.find()
+    console.log(result)
+    res.json(result)
+})
+
+app.get('/getlowstocks',async(req,res)=>{
+    const result = await Product.find({stock:{$lt:50}})
     console.log(result)
     res.json(result)
 })
