@@ -4,7 +4,7 @@ function SideNav() {
     return (
         <div>
             <nav>
-                <div className="nav-wrapper" style={{'backgroundColor':'rgb(102,255,153)'}}>
+                <div className="nav-wrapper" style={{'backgroundColor':'#b4eeb4'}}>
                     <Link to="#" className="brand-logo center">Inventory</Link>
                     <Link to="#" data-target="slide-out" className="sidenav-trigger show-on-large"><i className="material-icons">menu</i></Link>
                     <ul id="nav-mobile" className="right hide-on-med-and-down">

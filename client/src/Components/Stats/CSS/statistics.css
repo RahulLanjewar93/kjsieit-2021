@@ -7,7 +7,7 @@
 }
 
 .card-panel{
-    background: linear-gradient(rgb(102,204,255), rgb(166, 225, 255));
+    background: linear-gradient(#eeb4b4, #f0cdcd);
 }
 
 .card-panel span{
@@ -30,18 +30,18 @@ table {
 }
 
 th {
-    background-color: rgb(255,102,128);
+    background-color: #b4b4ee;
 }
 
 td {
     margin: 0vmin;
     padding: 1vmin;
-    background-color: rgb(255,230,102);
+    background-color: #f0eaa1;
 }
 
 .productimg{
     height: 5vmin;
     width: auto;
-    border: 0.1vmin solid rgb(255, 169, 169);
+    border: 0.1vmin solid #eeb4b4;
     border-radius: 0.5vmin;
 }
