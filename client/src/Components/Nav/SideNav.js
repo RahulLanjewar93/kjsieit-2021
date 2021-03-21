@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 function SideNav() {
     return (
         <div>
-            <nav>
+            <nav style={{position:'fixed'}}>
                 <div className="nav-wrapper deep-purple">
                     <Link to="#" data-target="slide-out" className="sidenav-trigger show-on-large"><i className="material-icons">menu</i></Link>
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
@@ -28,6 +28,7 @@ function SideNav() {
                 <li><Link to="/product">Add Product</Link></li>
                 <li><Link to="/category">Add Category</Link></li>
             </ul>
+            <br/><br/><br/>
 
         </div>
     );
