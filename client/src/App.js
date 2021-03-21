@@ -12,12 +12,15 @@ import SideNav from './Components/Dashboard/SideNav';
 import Header from './Components/Dashboard/Header'
 import AddAgent from './Components/Dashboard/addAgent';
 import Statistics from './Components/Stats/Statistics'
+import {ProductProvider,ProductConsumer} from './Components/Dashboard/context'
+import Home from './Components/Dashboard/home'
 
 function App() {
     return (
         <Router>
             <SideNav></SideNav>
             <Header></Header>
+           
             <Switch>
                 <Route path='/signup'>
                     <SignUp></SignUp>
@@ -45,6 +48,11 @@ function App() {
                  </Route>
                 <Route path='/stats'>
                     <Statistics></Statistics>
+                </Route>
+                <Route path='/Update'>
+                  <div className="app">
+                   </div>
+                    <Home/>
                 </Route>
             </Switch>
         </Router>
