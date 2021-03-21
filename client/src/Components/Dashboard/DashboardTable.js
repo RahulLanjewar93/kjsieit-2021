@@ -62,17 +62,17 @@ const DashboardTable = ()=> {
                                     </tr>
                                     <tr>
                                         <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-cIM0mLfHYvMSTnjhxgPRtE-HwMCXp5QYVA&usqp=CAU" alt="product" style={{ height: '6vmin', width: 'auto' }} /></td>
-                                        <td>Nokia 2233</td>
-                                        <td>Mobile Phones</td>
-                                        <td>₹3000</td>
-                                        <td>50</td>
+                                        <td>Samsung Smart TV</td>
+                                        <td>Televisions</td>
+                                        <td>₹80000</td>
+                                        <td>30</td>
                                     </tr>
                                     <tr>
                                         <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-cIM0mLfHYvMSTnjhxgPRtE-HwMCXp5QYVA&usqp=CAU" alt="product" style={{ height: '6vmin', width: 'auto' }} /></td>
-                                        <td>Nokia 2233</td>
-                                        <td>Mobile Phones</td>
-                                        <td>₹3000</td>
-                                        <td>50</td>
+                                        <td>MacBook</td>
+                                        <td>Laptops</td>
+                                        <td>₹100000</td>
+                                        <td>46</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -103,21 +103,21 @@ const DashboardTable = ()=> {
                                         <td>Nokia 2233</td>
                                         <td>Mobile Phones</td>
                                         <td>₹3000</td>
-                                        <td>50</td>
+                                        <td>25</td>
                                     </tr>
                                     <tr>
                                         <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-cIM0mLfHYvMSTnjhxgPRtE-HwMCXp5QYVA&usqp=CAU" alt="product" style={{ height: '6vmin', width: 'auto' }} /></td>
-                                        <td>Nokia 2233</td>
-                                        <td>Mobile Phones</td>
-                                        <td>₹3000</td>
-                                        <td>50</td>
+                                        <td>Samsung Smart TV</td>
+                                        <td>Televisions</td>
+                                        <td>₹80000</td>
+                                        <td>20</td>
                                     </tr>
                                     <tr>
                                         <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-cIM0mLfHYvMSTnjhxgPRtE-HwMCXp5QYVA&usqp=CAU" alt="product" style={{ height: '6vmin', width: 'auto' }} /></td>
-                                        <td>Nokia 2233</td>
-                                        <td>Mobile Phones</td>
-                                        <td>₹3000</td>
-                                        <td>50</td>
+                                        <td>MacBook</td>
+                                        <td>Laptops</td>
+                                        <td>₹100000</td>
+                                        <td>30</td>
                                     </tr>
                                 </tbody>
                             </table>

@@ -11,8 +11,6 @@ body {
     color: #000;
 }
 
-/*Text color on hover*/
-
 .tabs .tab a:focus.active {
     background-color: #d1c4e9;
     color: #000;
@@ -23,11 +21,6 @@ body {
     color: #000;
 }
 
-
-/*Background and text color when a tab is active*/
-
 .tabs .indicator {
     background-color: #673ab7;
 }
-
-/*Color of underline*/

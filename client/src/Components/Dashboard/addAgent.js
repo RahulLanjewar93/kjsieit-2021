@@ -32,37 +32,38 @@ function AddAgent() {
             })
     }
     return (
-        <div className="card" style={{ maxWidth: '500px', padding: '10px', margin: '200px auto', textAlign: 'center' }}>
-            <input
-                placeholder="name"
-                type="text"
-                value={name}
-                onChange={(e) => {
-                    setName(e.target.value)
-                }}
-            />
-            <input
-                placeholder="email"
-                type="email"
-                value={email}
-                onChange={(e) => {
-                    setEmail(e.target.value)
-                }}
-            />
-            <input
-                placeholder="password"
-                type="password"
-                value={password}
-                onChange={(e) => {
-                    setPassword(e.target.value)
-                }}
-            />
-            <button className="waves-effect waves-light btn large-btn"
-                onClick={() => createAgent()}
-            >
-                Add Agent
-          </button><br />
-
+        <div class="row">
+            <div class="col s12 m5">
+                <div class="card-panel teal">
+                    <input
+                        placeholder="name"
+                        type="text"
+                        value={name}
+                        onChange={(e) => {
+                            setName(e.target.value)
+                        }}
+                    />
+                    <input
+                        placeholder="email"
+                        type="email"
+                        value={email}
+                        onChange={(e) => {
+                            setEmail(e.target.value)
+                        }}
+                    />
+                    <input
+                        placeholder="password"
+                        type="password"
+                        value={password}
+                        onChange={(e) => {
+                            setPassword(e.target.value)
+                        }}
+                    />
+                    <button className="waves-effect waves-light btn large-btn" onClick={() => createAgent()}>
+                        Add Agent
+                    </button>
+                </div>
+            </div>
         </div>
     );
 }

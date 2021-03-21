@@ -29,12 +29,8 @@ function SideNav() {
                 <div className="nav-wrapper deep-purple">
                     <Link to="#" data-target="slide-out" className="sidenav-trigger show-on-large"><i className="material-icons">menu</i></Link>
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
-<<<<<<< HEAD
-                        <li><Link to="#" className="black-text">Log Out</Link></li>
-=======
                         
                         
->>>>>>> e0b20e839b215e515f5658f03baa7dcee4a8e288
                     </ul>
                 </div>
             </nav>
