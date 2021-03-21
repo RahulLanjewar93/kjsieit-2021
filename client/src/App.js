@@ -15,6 +15,7 @@ import AddOrders from './Components/Orders/AddOrder'
 import ShowOrders from './Components/Orders/ShowOrder'
 import { reducer, initialState } from './reducers/userReducer'
 import Home from './Components/Dashboard/home';
+import ProductList from './Components/productList';
 
 
 export const UserContext = createContext()
@@ -40,7 +41,6 @@ const Routing = ()=>{
                 <Route path='/Update'>
                     <Home/>
                 </Route>
-
                 <Route path='/categories'>
                     <ShowCategory></ShowCategory>
                 </Route>
@@ -67,6 +67,9 @@ const Routing = ()=>{
                 </Route>
                 <Route path='/order'>
                     <AddOrders></AddOrders>
+                </Route>
+                <Route>
+                    <ProductList/>
                 </Route>
             </Switch>
     );

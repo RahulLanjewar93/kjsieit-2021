@@ -14,6 +14,7 @@ function SideNav() {
                 <li><Link to="/addAgent">Add Agent</Link></li>,
                 <li><Link to="/product">Add Product</Link></li>,
                 <li><Link to="/category">Add Category</Link></li>,
+                <li><Link to="/productList">Product List</Link></li>,
                 <li><Link to="/order">Place Order</Link></li>,
                 <li><Link to="/stats">Show Stats</Link></li>,
                 <li><a href="#" onClick={()=>{
