@@ -11,11 +11,13 @@ import Category from './Components/Categories/Category'
 import SideNav from './Components/Dashboard/SideNav';
 import Header from './Components/Dashboard/Header'
 import AddAgent from './Components/Dashboard/addAgent';
+import Statistics from './Components/Stats/Statistics'
 
 function App() {
     return (
         <Router>
             <SideNav></SideNav>
+            <Header></Header>
             <Switch>
                 <Route path='/signup'>
                     <SignUp></SignUp>
@@ -35,14 +37,14 @@ function App() {
                 <Route path='/product'>
                     <Product></Product>
                 </Route>
-                <Route path='/Header'>
-                    <Header></Header>
-                </Route>
                 <Route path='/dashboard'>
                     <DashboardTable></DashboardTable>
                 </Route>
                 <Route path='/addAgent'>
                     <AddAgent/>
+                 </Route>
+                <Route path='/stats'>
+                    <Statistics></Statistics>
                 </Route>
             </Switch>
         </Router>
