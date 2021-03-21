@@ -7,6 +7,9 @@ const bcrypt = require('bcrypt')
 const Product = require('./models/product')
 const Category = require('./models/category')
 const User = require('./models/users')
+const Agent =require('./models/agent')
+
+
 
 //Session
 const session = require('express-session')
@@ -38,12 +41,14 @@ const MONGOURL = process.env.MONGOURL
 
 //Mongoose
 const mongoose = require('mongoose');
+const { addAgent } = require('./controllers/admin');  
 mongoose.connect(MONGOURL, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.connection.on('connected',()=>{console.log("Database Connection Successfull")})
 mongoose.connection.on('error',(error)=>{console.log("There was an error while connecting to the database",error)})
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
+app.use('/',addAgent)
 
 app.post('/signup', async(req, res) => {
     const { username, password } = req.body

@@ -1,24 +1,25 @@
-const User = require('../models/user')
+const Agent = require('../models/agent')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 
-module.exports.signup = (req,res)=>{
-    const { name, password } = req.body
-    if(!name || !password){
+module.exports.addAgent = (req,res)=>{
+    const { name, email, password } = req.body
+    if(!name || !email || !password){
         return res.status(422).json({error:"please add all the fields"})
     }
-    User.findOne({name:name})
+    Agent.findOne({email:email})
     .then((savedUser)=>{
         if(savedUser){
             return res.status(422).json({error:"user already exists"})
         }
         bcrypt.hash(password,12)
         .then(hashedpassword=>{
-            const user = new User({
+            const agent = new Agent({
                 name,
+                email,
                 password:hashedpassword
             })
-            user.save()
+            agent.save()
             .then(user=>{
                 res.json({message:"saved successfully"})
             })

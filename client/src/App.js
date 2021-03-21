@@ -10,6 +10,7 @@ import Categories from './Components/Categories/Categories'
 import Category from './Components/Categories/Category'
 import SideNav from './Components/Dashboard/SideNav';
 import Header from './Components/Dashboard/Header'
+import AddAgent from './Components/Dashboard/addAgent';
 
 function App() {
     return (
@@ -39,6 +40,9 @@ function App() {
                 </Route>
                 <Route path='/dashboard'>
                     <DashboardTable></DashboardTable>
+                </Route>
+                <Route path='/addAgent'>
+                    <AddAgent/>
                 </Route>
             </Switch>
         </Router>

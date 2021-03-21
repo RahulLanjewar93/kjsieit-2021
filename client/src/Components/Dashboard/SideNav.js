@@ -25,7 +25,7 @@ function SideNav() {
             <li><Link to="/dashboard">Product Inventory</Link></li>
             <li><Link to="/products">View Sales</Link></li>
             <li><Link to="#!">Update Inventory</Link></li>
-            <li><Link to="#!">Add Agent</Link></li>
+            <li><Link to="/addAgent">Add Agent</Link></li>
             <li><Link to="/product">Add Product</Link></li>
             <li><Link to="/category">Add Category</Link></li>
         </ul>

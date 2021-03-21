@@ -6,10 +6,11 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const {validateUser} = require('../middleware')
 const { signup,signin } = require('../controllers/auths')
+const { addAgent } = require('../controllers/admin')
 
 router.post('/signin',validateUser,signin)
 
-router.post('/signup',validateUser,signup)
+router.post('/addAgent',addAgent)
 
 
 
